@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    text-align: center;
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgb(38, 93, 97);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #7391379e;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* تنسيق الحاوية الرئيسية */
+body {
+    background: linear-gradient(135deg, #caf3e4, #ffffff); /* خلفية متدرجة */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* تصميم الجدول كبطاقة عائمة */
+table {
+    border-radius: 15px;
+    overflow: hidden; /* لإظهار انحناء الزوايا */
+    border: none;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* تأثير عند تمرير الفأرة على الصفوف */
+tr:hover {
+    background-color: #eef2ff !important;
+    transition: 0.3s;
+}
+
+/* تمييز الحصة الحالية (مثال) */
+.active-class {
+    background-color: #ffdd57 !important;
+    font-weight: bold;
+    border: 2px solid #f39c12;
+}
+// كود بسيط لتحديد اليوم الحالي وتلوينه في الجدول
+const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس'];
+const today = new Date().toLocaleDateString('ar-EG', { weekday: 'long' });
+
+document.querySelectorAll('tr').forEach(row => {
+    if (row.cells[0] && row.cells[0].innerText === today) {
+        row.style.backgroundColor = "#d1e7dd"; // تلوين صف اليوم الحالي
+    }
+});
+.main-header {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* توزيع الشعار والاسم بشكل احترافي */
+    align-items: center;
+    flex-wrap: wrap; /* لجعلها متوافقة مع الجوال */
+}
+
+.logo {
+    width: 150px; /* تحكم في حجم الشعار من هنا */
+    height: auto;
+}
+
+.school-info {
+    text-align: center;
+    color: #008080; /* لون أخضر قريب من هوية الوزارة */
+}
+
+.school-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
